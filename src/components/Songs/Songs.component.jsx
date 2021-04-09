@@ -13,7 +13,8 @@ class Songs extends Component {
     } 
 
     getAllSongs = () => {
-        fetch('http://localhost:3030/songs', {method: 'GET'})
+        
+        fetch('http://ec2-34-201-125-164.compute-1.amazonaws.com:3030/songs', {method: 'GET'})
         .then(res => res.json())
         .then(res => this.setState({songs: res}))
         .catch((error) => console.log(error))
